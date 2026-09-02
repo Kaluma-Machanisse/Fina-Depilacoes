@@ -3,6 +3,7 @@ import {
   redesSociais,
   endereco,
   linkMapa,
+  linkMapaEmbed,
   horario,
   telefone,
   email,
@@ -39,9 +40,13 @@ export default function Contactos() {
 
         {/* Endereço, horário e mapa */}
         <div className="flex flex-col md:flex-row gap-8 items-center mb-12">
-          <div className="flex-1 w-full aspect-video max-w-sm rounded-2xl bg-primary-light/40 border border-primary-light flex items-center justify-center mx-auto md:mx-0">
-            <span className="text-muted text-sm">Mapa (em breve)</span>
-          </div>
+          <iframe
+            title="Localização do salão no Google Maps"
+            src={linkMapaEmbed}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="flex-1 w-full aspect-video max-w-sm rounded-2xl border border-primary-light mx-auto md:mx-0"
+          />
 
           <div className="flex-1 space-y-4">
             <div className="flex items-start gap-3">

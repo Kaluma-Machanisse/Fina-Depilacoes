@@ -14,7 +14,10 @@ export const redesSociais: RedeSocial[] = [
 export const endereco =
   "Av. Eduardo Mondlane, prédio 481, esquina do KFC, Maputo, Moçambique";
 export const linkMapa =
-  "https://maps.google.com/?q=Av.+Mau+Ts%C3%A9+Tung+esquina+Rua+Fern%C3%A3o+Veloso,+Maputo";
+  "https://maps.google.com/?q=Av.+Eduardo+Mondlane+481+esquina+do+KFC,+Maputo";
+// Mesma localização, versão para <iframe> (sem chave de API).
+export const linkMapaEmbed =
+  "https://www.google.com/maps?q=Av.+Eduardo+Mondlane+481+esquina+do+KFC,+Maputo&output=embed";
 
 // Contactos directos confirmados pelo utilizador.
 export const telefone = "+258 84 855 2104";
