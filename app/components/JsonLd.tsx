@@ -15,7 +15,7 @@ const dados = {
   name: NOME_NEGOCIO,
   description: DESCRICAO_CURTA,
   url: SITE_URL,
-  image: `${SITE_URL}/opengraph-image.png`,
+  image: `${SITE_URL}/images/logo-fina-depilacoes.webp`,
   telephone: telefone,
   email,
   priceRange: "$$",
