@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" fill="none">
+  <g stroke="#d81b7f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <!-- rosto / topo da cabeça -->
+    <path d="M 205 55
+             C 235 50, 255 75, 250 108
+             C 247 130, 232 148, 213 158" />
+    <!-- cabelo, lado de trás -->
+    <path d="M 205 55
+             C 178 52, 160 75, 163 105
+             C 165 128, 178 148, 198 160" />
+    <!-- madeixa solta -->
+    <path d="M 178 95
+             C 185 110, 200 118, 213 112" />
+    <!-- pescoço/ombro até às costas, descendo até ao tornozelo -->
+    <path d="M 198 160
+             C 178 172, 168 190, 172 210
+             C 178 250, 190 290, 195 330
+             C 198 360, 196 392, 186 420
+             C 178 445, 172 468, 178 492
+             C 182 510, 188 526, 198 538" />
+    <!-- ombro direito, curva das costas até à anca -->
+    <path d="M 213 158
+             C 240 168, 258 188, 262 214
+             C 266 246, 258 278, 246 302" />
+    <!-- anca e coxa: uma curva fluida só -->
+    <path d="M 246 302
+             C 276 298, 308 312, 328 340
+             C 350 370, 352 408, 330 438
+             C 312 462, 284 474, 256 468" />
+    <!-- linha da perna que cruza por baixo, fechando a silhueta -->
+    <path d="M 246 302
+             C 228 320, 218 344, 222 368
+             C 226 392, 240 412, 260 424" />
+    <!-- floreado final, ecoando o logo original -->
+    <path d="M 330 438
+             C 352 444, 374 442, 392 428"
+             stroke-width="5" opacity="0.7" />
+    <path d="M 312 458
+             C 336 468, 362 468, 384 452"
+             stroke-width="4" opacity="0.5" />
+  </g>
+</svg>
