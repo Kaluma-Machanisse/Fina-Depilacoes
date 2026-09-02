@@ -6,14 +6,19 @@ export type RedeSocial = {
 
 export const redesSociais: RedeSocial[] = [
   { nome: "Instagram", url: "https://instagram.com/finadepilacoes" },
-  { nome: "Facebook", url: "https://facebook.com/finadepilacoes" },
+  { nome: "Facebook", url: "https://www.facebook.com/Finadepilacoes/photos/" },
   { nome: "TikTok", url: "https://tiktok.com/@finadepilacoes" },
 ];
 
-// Endereço real, retirado dos cartazes do salão.
-export const endereco = "Av. Mau Tsé Tung, esquina com Rua Fernão Veloso, Maputo";
+// Endereço real, confirmado pelo utilizador (localização exacta).
+export const endereco =
+  "Av. Eduardo Mondlane, prédio 481, esquina do KFC, Maputo, Moçambique";
 export const linkMapa =
   "https://maps.google.com/?q=Av.+Mau+Ts%C3%A9+Tung+esquina+Rua+Fern%C3%A3o+Veloso,+Maputo";
+
+// Contactos directos confirmados pelo utilizador.
+export const telefone = "+258 84 855 2104";
+export const email = "alfrina.abdula@gmail.com";
 
 export const horario = {
   semana: "Segunda a Sexta, 9h às 18h",

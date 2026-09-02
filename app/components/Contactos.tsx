@@ -1,5 +1,12 @@
 import { gerarLinkWhatsApp } from "../lib/whatsapp";
-import { redesSociais, endereco, linkMapa, horario } from "../data/contactos";
+import {
+  redesSociais,
+  endereco,
+  linkMapa,
+  horario,
+  telefone,
+  email,
+} from "../data/contactos";
 import {
   IconWhatsApp,
   IconInstagram,
@@ -7,6 +14,8 @@ import {
   IconTikTok,
   IconPin,
   IconClock,
+  IconPhone,
+  IconMail,
 } from "./icons";
 
 // Ícone por nome da rede social, para não repetir if/else no JSX.
@@ -61,7 +70,7 @@ export default function Contactos() {
         </div>
 
         {/* Grid de canais de contacto */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           <a
             href={gerarLinkWhatsApp()}
             target="_blank"
@@ -70,6 +79,22 @@ export default function Contactos() {
           >
             <IconWhatsApp className="w-7 h-7 text-primary" />
             <span className="text-sm font-medium text-foreground">WhatsApp</span>
+          </a>
+
+          <a
+            href={`tel:${telefone.replace(/\s/g, "")}`}
+            className="flex flex-col items-center gap-3 rounded-2xl bg-background shadow-sm hover:shadow-lg transition-shadow p-6"
+          >
+            <IconPhone className="w-7 h-7 text-primary" />
+            <span className="text-sm font-medium text-foreground">Telemóvel</span>
+          </a>
+
+          <a
+            href={`mailto:${email}`}
+            className="flex flex-col items-center gap-3 rounded-2xl bg-background shadow-sm hover:shadow-lg transition-shadow p-6"
+          >
+            <IconMail className="w-7 h-7 text-primary" />
+            <span className="text-sm font-medium text-foreground">E-mail</span>
           </a>
 
           {redesSociais.map((rede) => {

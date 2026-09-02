@@ -14,9 +14,12 @@ novas sem necessidade real — preferir soluções nativas (CSS, SVG à mão,
 
 - WhatsApp / contacto: `258848552104` (confirmado pelo flyer; NÃO é o
   número antigo `258844491029`, que estava errado).
-- Endereço real: Av. Mau Tsé Tung, esquina com Rua Fernão Veloso, Maputo
-  (retirado dos cartazes do salão — o endereço anterior, "Av. Julius
-  Nyerere", era um placeholder inventado e já foi substituído).
+- Endereço real: Av. Eduardo Mondlane, prédio 481, esquina do KFC,
+  Maputo (localização exacta confirmada pelo utilizador). Substitui o
+  "Av. Mau Tsé Tung / Rua Fernão Veloso" tirado dos cartazes, que por
+  sua vez tinha substituído o placeholder "Av. Julius Nyerere".
+- E-mail: alfrina.abdula@gmail.com. Telemóvel/WhatsApp: +258 84 855 2104
+  (= 258848552104, já era o número certo).
 - Horário: Segunda a Sexta 9h–18h, Sábado 8h–14h (confirmado por cartaz).
 - Preços em `app/data/servicos.ts` vêm da tabela real do salão. A
   categoria "Sobrancelhas e Pestanas" (Aplicação de pestanas, 500 MT) foi
