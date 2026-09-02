@@ -2,12 +2,14 @@ export type RedeSocial = {
   nome: string;
   // "url" é um placeholder — substitui pelo link real da conta assim que existir.
   url: string;
+  // Texto curto mostrado ao lado do ícone (ex.: "@finadepilacoes").
+  handle: string;
 };
 
 export const redesSociais: RedeSocial[] = [
-  { nome: "Instagram", url: "https://instagram.com/finadepilacoes" },
-  { nome: "Facebook", url: "https://www.facebook.com/Finadepilacoes/photos/" },
-  { nome: "TikTok", url: "https://tiktok.com/@finadepilacoes" },
+  { nome: "Instagram", url: "https://instagram.com/finadepilacoes", handle: "@finadepilacoes" },
+  { nome: "Facebook", url: "https://www.facebook.com/Finadepilacoes/photos/", handle: "/Finadepilacoes" },
+  { nome: "TikTok", url: "https://tiktok.com/@finadepilacoes", handle: "@finadepilacoes" },
 ];
 
 // Endereço real, confirmado pelo utilizador (localização exacta).

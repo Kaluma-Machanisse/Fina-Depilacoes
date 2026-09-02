@@ -74,51 +74,86 @@ export default function Contactos() {
           </div>
         </div>
 
-        {/* Grid de canais de contacto */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-          <a
-            href={gerarLinkWhatsApp()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col items-center gap-3 rounded-2xl bg-background shadow-sm hover:shadow-lg transition-shadow p-6"
-          >
-            <IconWhatsApp className="w-7 h-7 text-primary" />
-            <span className="text-sm font-medium text-foreground">WhatsApp</span>
-          </a>
+        {/* Canais de contacto: redes sociais à esquerda, contactos directos à direita */}
+        <div className="grid gap-8 sm:grid-cols-2">
+          {/* Redes sociais */}
+          <div>
+            <h3 className="eyebrow mb-4">Redes sociais</h3>
+            <ul className="space-y-3">
+              {redesSociais.map((rede) => {
+                const Icone = iconesPorRede[rede.nome];
+                return (
+                  <li key={rede.nome}>
+                    <a
+                      href={rede.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+                    >
+                      {Icone && <Icone className="w-5 h-5 text-primary shrink-0" />}
+                      <span className="text-sm">
+                        <span className="font-medium">{rede.nome}</span>
+                        <span className="text-muted group-hover:text-primary">
+                          {" "}· {rede.handle}
+                        </span>
+                      </span>
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
 
-          <a
-            href={`tel:${telefone.replace(/\s/g, "")}`}
-            className="flex flex-col items-center gap-3 rounded-2xl bg-background shadow-sm hover:shadow-lg transition-shadow p-6"
-          >
-            <IconPhone className="w-7 h-7 text-primary" />
-            <span className="text-sm font-medium text-foreground">Telemóvel</span>
-          </a>
-
-          <a
-            href={`mailto:${email}`}
-            className="flex flex-col items-center gap-3 rounded-2xl bg-background shadow-sm hover:shadow-lg transition-shadow p-6"
-          >
-            <IconMail className="w-7 h-7 text-primary" />
-            <span className="text-sm font-medium text-foreground">E-mail</span>
-          </a>
-
-          {redesSociais.map((rede) => {
-            const Icone = iconesPorRede[rede.nome];
-            return (
-              <a
-                key={rede.nome}
-                href={rede.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-3 rounded-2xl bg-background shadow-sm hover:shadow-lg transition-shadow p-6"
-              >
-                {Icone && <Icone className="w-7 h-7 text-primary" />}
-                <span className="text-sm font-medium text-foreground">
-                  {rede.nome}
-                </span>
-              </a>
-            );
-          })}
+          {/* Contactos directos */}
+          <div>
+            <h3 className="eyebrow mb-4">Fala connosco</h3>
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href={gerarLinkWhatsApp()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+                >
+                  <IconWhatsApp className="w-5 h-5 text-primary shrink-0" />
+                  <span className="text-sm">
+                    <span className="font-medium">WhatsApp</span>
+                    <span className="text-muted group-hover:text-primary">
+                      {" "}· {telefone}
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${telefone.replace(/\s/g, "")}`}
+                  className="group flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+                >
+                  <IconPhone className="w-5 h-5 text-primary shrink-0" />
+                  <span className="text-sm">
+                    <span className="font-medium">Telemóvel</span>
+                    <span className="text-muted group-hover:text-primary">
+                      {" "}· {telefone}
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`mailto:${email}`}
+                  className="group flex items-center gap-3 text-foreground hover:text-primary transition-colors"
+                >
+                  <IconMail className="w-5 h-5 text-primary shrink-0" />
+                  <span className="text-sm break-all">
+                    <span className="font-medium">E-mail</span>
+                    <span className="text-muted group-hover:text-primary">
+                      {" "}· {email}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
