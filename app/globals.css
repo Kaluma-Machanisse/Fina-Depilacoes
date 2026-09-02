@@ -31,13 +31,35 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Scroll suave ao clicar num link do menu (#4) — respeita quem pediu menos animações. */
+/* Scroll suave ao clicar num link do menu — respeita quem pediu menos animações.
+   scroll-padding-top evita que o título da secção fique tapado pelo header fixo. */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+/* Entrada do menu de telemóvel — pequena descida + fade. */
+@keyframes menu-desce {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu-mobile-anim {
+  animation: menu-desce 0.2s ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .menu-mobile-anim {
+    animation: none;
   }
 }
 
