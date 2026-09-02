@@ -71,9 +71,20 @@ com `scrollTo`, transform com `translateX` em saltos, scroll contínuo) —
 esta é a que ficou. Não trocar para uma biblioteca de carrossel (peso de
 instalação desnecessário dado a restrição de dados).
 
+## SEO / metadata
+
+- `app/data/site.ts` tem `SITE_URL` = `https://fina-depilacoes.vercel.app`
+  (deploy gratuito da Vercel). **Trocar numa linha** quando houver domínio
+  próprio — é usado em `metadataBase`, Open Graph, JSON-LD e (futuro) sitemap.
+- Imagem de partilha gerada em código em `app/opengraph-image.tsx` (sem
+  ficheiro nem fontes extra). JSON-LD de `HealthAndBeautyBusiness` em
+  `app/components/JsonLd.tsx`, com horário a espelhar `data/contactos.ts`.
+- Sem coordenadas GPS do salão — JSON-LD só com morada + telefone + horário.
+
 ## Pendente / por decidir
 
 - Footer do site ainda não foi construído.
+- SEO por fazer: `app/robots.ts`, `app/sitemap.ts`, página `not-found.tsx`.
 - Ainda não se decidiu se o site vai expandir para outros serviços que
   aparecem nos flyers (pestanas, manicure/pedicure, venda de cosméticos)
   além de depilação — perguntar ao utilizador antes de adicionar.

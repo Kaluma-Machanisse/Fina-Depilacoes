@@ -10,7 +10,9 @@
   --primary-light: #e8dcdc;
   --wine: #3d1a22;
   --gold: #c9a869;
-  --muted: #8a7b83;
+  /* Escurecido de #8a7b83 (dava ~3.9:1, abaixo do mínimo AA) para ~5:1
+     sobre o fundo claro — mantém o tom malva-acinzentado. */
+  --muted: #77676f;
 }
 
 @theme inline {
