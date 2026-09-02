@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import JsonLd from "./components/JsonLd";
 import { SITE_URL, NOME_NEGOCIO, DESCRICAO_CURTA } from "./data/site";
 
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <JsonLd />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
