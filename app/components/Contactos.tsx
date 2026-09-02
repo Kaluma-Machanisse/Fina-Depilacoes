@@ -1,4 +1,5 @@
 import { gerarLinkWhatsApp } from "../lib/whatsapp";
+import SectionHeading from "./SectionHeading";
 import {
   redesSociais,
   endereco,
@@ -28,15 +29,15 @@ const iconesPorRede: Record<string, React.ComponentType<React.SVGProps<SVGSVGEle
 
 export default function Contactos() {
   return (
-    <section id="contactos" className="py-16 md:py-24 bg-primary-light/20">
+    <section id="contactos" className="py-16 md:py-28">
       <div className="max-w-5xl mx-auto px-6">
-        <h2 className="font-serif text-3xl text-foreground text-center mb-4">
-          Contactos e Localização
-        </h2>
-        <p className="text-muted text-center max-w-xl mx-auto mb-12">
+        <SectionHeading
+          eyebrow="Onde nos encontrar"
+          titulo="Contactos e Localização"
+        >
           Fala connosco pelo WhatsApp, segue-nos nas redes sociais ou
           vem visitar-nos. Estamos à tua espera.
-        </p>
+        </SectionHeading>
 
         {/* Endereço, horário e mapa */}
         <div className="flex flex-col md:flex-row gap-8 items-center mb-12">

@@ -106,7 +106,10 @@ export default function Navbar() {
     }`;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-primary-light">
+    <header
+      id="topo"
+      className="sticky top-0 z-50 bg-background/90 backdrop-blur border-b border-primary-light"
+    >
       <div className="max-w-5xl mx-auto flex items-center justify-between px-6 py-3">
         <a
           href="#"

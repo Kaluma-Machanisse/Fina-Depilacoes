@@ -35,14 +35,16 @@ export default function Hero() {
         </div>
 
         <div className="flex-1 flex items-center justify-center md:justify-end">
-          <Image
-            src="/images/logo-fina-depilacoes.webp"
-            alt="Fina Depilações"
-            width={900}
-            height={523}
-            priority
-            className="w-full max-w-sm h-auto"
-          />
+          <span className="logo-hero w-full max-w-sm">
+            <Image
+              src="/images/logo-fina-depilacoes.webp"
+              alt="Fina Depilações"
+              width={900}
+              height={523}
+              priority
+              className="w-full h-auto"
+            />
+          </span>
         </div>
       </div>
     </section>

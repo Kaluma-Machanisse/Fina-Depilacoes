@@ -8,7 +8,7 @@ const diferenciais = [
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="bg-primary-light/20 py-16 md:py-24">
+    <section id="sobre" className="bg-primary-light/20 py-16 md:py-28">
       <div className="max-w-4xl mx-auto px-6 grid md:grid-cols-[minmax(0,220px)_1fr] gap-10 md:gap-14 items-start">
         <div className="mx-auto md:mx-0 w-40 md:w-full">
           <Image
@@ -21,6 +21,7 @@ export default function Sobre() {
         </div>
 
         <div>
+          <p className="eyebrow mb-3">Quem somos</p>
           <h2 className="font-serif text-3xl text-foreground mb-4">Sobre nós</h2>
           <p className="text-foreground/80 leading-relaxed max-w-lg">
             A Fina Depilações é um espaço dedicado ao cuidado da pele, à

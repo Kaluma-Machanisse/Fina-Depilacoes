@@ -65,6 +65,75 @@ html {
   }
 }
 
+/* Logo do Hero — entrada suave, flutuação discreta e brilho dourado ocasional.
+   Tudo desligado em prefers-reduced-motion. */
+@keyframes logo-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes logo-flutua {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+@keyframes logo-brilho {
+  from {
+    transform: translateX(-160%) rotate(12deg);
+  }
+  to {
+    transform: translateX(320%) rotate(12deg);
+  }
+}
+
+.logo-hero {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  animation: logo-entrada 0.9s ease-out both;
+}
+.logo-hero img {
+  animation: logo-flutua 7s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+.logo-hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 35%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(201, 168, 105, 0.28) 50%,
+    transparent 100%
+  );
+  animation: logo-brilho 6s linear infinite;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-hero {
+    animation: none;
+    opacity: 1;
+  }
+  .logo-hero img {
+    animation: none;
+  }
+  .logo-hero::after {
+    display: none;
+  }
+}
+
 /* Rótulo pequeno em versalete e espaçado — usado acima dos títulos de secção. */
 .eyebrow {
   font-size: 0.75rem;

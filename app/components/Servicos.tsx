@@ -1,5 +1,6 @@
 import ServicoCard from "./ServicoCard";
 import Carrossel from "./Carrossel";
+import SectionHeading from "./SectionHeading";
 import { categorias, formatarPreco } from "../data/servicos";
 
 // Imagens de exemplo (placeholders decorativos — gradientes da marca), até
@@ -15,14 +16,11 @@ const fotosServicos = [
 
 export default function Servicos() {
   return (
-    <section id="servicos" className="py-16 md:py-24">
+    <section id="servicos" className="py-16 md:py-28 bg-primary-light/20">
       <div className="max-w-4xl mx-auto px-6">
-        <h2 className="font-serif text-3xl text-foreground text-center mb-2">
-          Tabela de Depilação
-        </h2>
-        <p className="text-muted text-center mb-8">
+        <SectionHeading eyebrow="Serviços" titulo="Tabela de Depilação">
           Preços em Meticais (MZN). Toca no ícone do WhatsApp para marcar.
-        </p>
+        </SectionHeading>
 
         <Carrossel fotos={fotosServicos} />
 

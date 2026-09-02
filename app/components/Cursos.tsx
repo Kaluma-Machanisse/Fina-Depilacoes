@@ -2,19 +2,16 @@ import { cursos } from "../data/cursos";
 import { formatarPreco } from "../data/servicos";
 import { gerarLinkWhatsAppCurso } from "../lib/whatsapp";
 import { IconWhatsApp } from "./icons";
+import SectionHeading from "./SectionHeading";
 
 export default function Cursos() {
   return (
-    <section id="cursos" className="py-16 md:py-24 bg-primary-light/20">
+    <section id="cursos" className="py-16 md:py-28">
       <div className="max-w-4xl mx-auto px-6">
-        <p className="eyebrow text-center mb-3">Aprende connosco</p>
-        <h2 className="font-serif text-3xl text-foreground text-center mb-2">
-          Cursos de Depilação
-        </h2>
-        <p className="text-muted text-center max-w-xl mx-auto mb-12">
+        <SectionHeading eyebrow="Aprende connosco" titulo="Cursos de Depilação">
           Queres transformar a depilação numa profissão? Escolhe o curso que
           melhor se adapta a ti.
-        </p>
+        </SectionHeading>
 
         <div className="grid sm:grid-cols-2 gap-6">
           {cursos.map((curso) => (
