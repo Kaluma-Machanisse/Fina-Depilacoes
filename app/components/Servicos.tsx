@@ -2,14 +2,15 @@ import ServicoCard from "./ServicoCard";
 import Carrossel from "./Carrossel";
 import { categorias, formatarPreco } from "../data/servicos";
 
-// Imagens de exemplo (placeholders), até termos fotos reais em boa qualidade
-// para cada categoria de serviço.
+// Imagens de exemplo (placeholders decorativos — gradientes da marca), até
+// termos fotos reais em boa qualidade. alt="" porque não acrescentam
+// informação para quem usa leitor de ecrã.
 const fotosServicos = [
-  { src: "/images/exemplo-1.webp", alt: "Depilação Facial", width: 1200, height: 800 },
-  { src: "/images/exemplo-2.webp", alt: "Depilação de Virilha", width: 1200, height: 800 },
-  { src: "/images/exemplo-3.webp", alt: "Depilação Corporal", width: 1200, height: 800 },
-  { src: "/images/exemplo-4.webp", alt: "Sobrancelhas e Pestanas", width: 1200, height: 800 },
-  { src: "/images/exemplo-5.webp", alt: "Espaço Fina Depilações", width: 1200, height: 800 },
+  { src: "/images/exemplo-1.webp", alt: "", width: 1200, height: 800 },
+  { src: "/images/exemplo-2.webp", alt: "", width: 1200, height: 800 },
+  { src: "/images/exemplo-3.webp", alt: "", width: 1200, height: 800 },
+  { src: "/images/exemplo-4.webp", alt: "", width: 1200, height: 800 },
+  { src: "/images/exemplo-5.webp", alt: "", width: 1200, height: 800 },
 ];
 
 export default function Servicos() {
