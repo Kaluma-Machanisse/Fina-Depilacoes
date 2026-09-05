@@ -60,6 +60,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="pt-MZ"
       className={`${heading.variable} ${body.variable} h-full antialiased`}
+      // O script "tema-inicial" (abaixo) pode adicionar data-theme a este
+      // <html> antes do React hidratar, consoante a escolha gravada no
+      // browser — o servidor nunca pode saber essa escolha antecipadamente,
+      // por isso este aviso de hidratação é esperado e inofensivo aqui.
+      suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
         {/* Aplica a escolha manual de tema (localStorage) antes da primeira
