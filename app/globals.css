@@ -59,6 +59,14 @@
   padding: 0.4rem 0.75rem;
 }
 
+/* O logótipo tem um rosa-choque (#d81b7f) mais vivo do que a paleta
+   discreta do site (--primary #8a4a5c). Um filtro leve baixa a saturação
+   e puxa o tom para o rosewood da marca, sem precisar de recolorir o
+   ficheiro. Afinar aqui se ficar demasiado apagado ou ainda muito vivo. */
+.logo-plate img {
+  filter: saturate(0.72) hue-rotate(6deg) brightness(0.97);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
