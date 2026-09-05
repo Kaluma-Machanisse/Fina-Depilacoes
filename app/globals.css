@@ -13,6 +13,8 @@
   /* Escurecido de #8a7b83 (dava ~3.9:1, abaixo do mínimo AA) para ~5:1
      sobre o fundo claro — mantém o tom malva-acinzentado. */
   --muted: #77676f;
+  /* Cor do brilho que atravessa o logótipo (rosewood suave, discreto). */
+  --logo-brilho: rgba(138, 74, 92, 0.16);
   color-scheme: light;
 }
 
@@ -35,6 +37,9 @@
   --wine: #8f4257;
   --gold: #c9a869;
   --muted: #9c8b8f;
+  /* O logótipo fica sobre a prancha clara mesmo no tema escuro, por isso o
+     brilho mantém o tom rosewood — só um pouco mais forte. */
+  --logo-brilho: rgba(138, 74, 92, 0.2);
   color-scheme: dark;
   --tw-shadow-color: rgb(255 255 255 / 8%);
 }
@@ -104,8 +109,10 @@ html {
   }
 }
 
-/* Logo do Hero — entrada suave, flutuação discreta e brilho dourado ocasional.
-   Tudo desligado em prefers-reduced-motion. */
+/* Logo do Hero — entrada suave, flutuação discreta e um brilho subtil a
+   atravessar o logótipo. Tom rosewood da marca em vez de dourado: discreto
+   mas visível. Ajustar a cor/opacidade em --logo-brilho (:root e no bloco
+   do tema escuro). Tudo desligado em prefers-reduced-motion. */
 @keyframes logo-entrada {
   from {
     opacity: 0;
@@ -154,7 +161,7 @@ html {
   background: linear-gradient(
     100deg,
     transparent 0%,
-    rgba(201, 168, 105, 0.28) 50%,
+    var(--logo-brilho) 50%,
     transparent 100%
   );
   animation: logo-brilho 6s linear infinite;
