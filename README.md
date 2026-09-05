@@ -81,10 +81,11 @@ fotos/             Fotos originais do salão (não vão para produção)
 
 ## Tema claro/escuro
 
-O site segue automaticamente a preferência do sistema operativo
-(`prefers-color-scheme`). Há também um botão (ícone de sol/lua) na barra de
-navegação que permite forçar um dos dois temas manualmente; a escolha fica
-guardada no browser (`localStorage`) e é lembrada da próxima vez.
+O site abre sempre em tema claro, independentemente da preferência do
+sistema operativo do visitante. Há um botão (ícone de sol/lua) na barra de
+navegação que permite mudar para escuro manualmente; a escolha fica
+guardada no browser (`localStorage`) e é lembrada da próxima vez que a
+pessoa voltar.
 
 ## Publicar o site (deploy)
 

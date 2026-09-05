@@ -49,10 +49,9 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#8a4a5c" },
-    { media: "(prefers-color-scheme: dark)", color: "#1b1417" },
-  ],
+  // Cor fixa: o site abre sempre em tema claro (só muda com o botão),
+  // por isso a barra do browser não precisa de variar com o sistema.
+  themeColor: "#8a4a5c",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

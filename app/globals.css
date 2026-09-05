@@ -16,34 +16,17 @@
   color-scheme: light;
 }
 
-/* Modo escuro — por omissão segue a preferência do sistema; o botão em
-   Navbar/ThemeToggle.tsx pode forçar um dos dois lados gravando
-   data-theme="light"|"dark" no <html> (via localStorage, restaurado sem
-   flash por um script beforeInteractive em layout.tsx). Mesma família de
+/* Modo escuro — só por escolha manual no botão em Navbar/ThemeToggle.tsx
+   (grava data-theme="dark" no <html>, via localStorage, restaurado sem
+   flash por um script beforeInteractive em layout.tsx). Por omissão o site
+   fica sempre no tema claro, mesmo que o sistema operativo prefira escuro
+   — decisão deliberada, não é um esquecimento do @media. Mesma família de
    cores (rosewood/malva/dourado), reequilibrada para um fundo quase-preto.
    O --primary fica um pouco mais claro que no modo claro para servir de
    texto/ícone (~5.1:1 sobre o fundo); nos 3 botões sólidos com texto branco
    isso dá ~3.5:1 — ligeiramente abaixo do ideal AA, aceite conscientemente
    para não sacrificar a leitura do --primary como texto, que é o uso mais
    frequente. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --background: #1b1417;
-    --foreground: #f2e8e6;
-    --primary: #b9748a;
-    --primary-light: #432d34;
-    --wine: #8f4257;
-    --gold: #c9a869;
-    --muted: #9c8b8f;
-    color-scheme: dark;
-    /* Sombras (shadow-sm/shadow-lg) ficam invisíveis em fundo escuro se
-       continuarem pretas — troca-se por um brilho claro subtil. */
-    --tw-shadow-color: rgb(255 255 255 / 8%);
-  }
-}
-
-/* Escolha manual do botão — os mesmos valores, mas vencem a preferência
-   do sistema em qualquer direcção. */
 :root[data-theme="dark"] {
   --background: #1b1417;
   --foreground: #f2e8e6;
@@ -65,12 +48,6 @@
 .logo-plate {
   border-radius: 0.75rem;
   transition: background-color 0.2s ease, padding 0.2s ease;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .logo-plate {
-    background: #fdf8f7;
-    padding: 0.4rem 0.75rem;
-  }
 }
 :root[data-theme="dark"] .logo-plate {
   background: #fdf8f7;

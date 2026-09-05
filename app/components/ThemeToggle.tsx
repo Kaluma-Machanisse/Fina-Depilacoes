@@ -6,18 +6,16 @@ import { IconSol, IconLua } from "./icons";
 type Tema = "light" | "dark";
 
 // Tema efectivo agora: escolha manual gravada (data-theme) ou, na
-// ausência dela, a preferência do sistema.
+// ausência dela, claro — o site não segue a preferência do sistema,
+// só muda por acção do utilizador neste botão.
 function temaActual(): Tema {
   const escolhido = document.documentElement.getAttribute("data-theme");
-  if (escolhido === "light" || escolhido === "dark") return escolhido;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
+  return escolhido === "dark" ? "dark" : "light";
 }
 
-// Botão para forçar claro/escuro, substituindo a preferência do sistema.
-// Por omissão (sem clicar) o site continua a seguir o sistema — ver
-// globals.css e o script anti-flash em layout.tsx.
+// Botão para alternar entre claro e escuro. Por omissão (sem clicar) o
+// site fica sempre em tema claro — ver globals.css e o script anti-flash
+// em layout.tsx.
 export default function ThemeToggle() {
   const [tema, setTema] = useState<Tema | null>(null);
 
