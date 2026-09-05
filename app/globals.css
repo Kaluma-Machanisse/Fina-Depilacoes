@@ -13,6 +13,30 @@
   /* Escurecido de #8a7b83 (dava ~3.9:1, abaixo do mínimo AA) para ~5:1
      sobre o fundo claro — mantém o tom malva-acinzentado. */
   --muted: #77676f;
+  color-scheme: light;
+}
+
+/* Modo escuro — segue a preferência do sistema, sem botão nem JavaScript.
+   Mesma família de cores (rosewood/malva/dourado), reequilibrada para um
+   fundo quase-preto. O --primary fica um pouco mais claro que no modo claro
+   para servir de texto/ícone (~5.1:1 sobre o fundo); nos 3 botões sólidos
+   com texto branco isso dá ~3.5:1 — ligeiramente abaixo do ideal AA, aceite
+   conscientemente para não sacrificar a leitura do --primary como texto,
+   que é o uso mais frequente. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1b1417;
+    --foreground: #f2e8e6;
+    --primary: #b9748a;
+    --primary-light: #432d34;
+    --wine: #8f4257;
+    --gold: #c9a869;
+    --muted: #9c8b8f;
+    color-scheme: dark;
+    /* Sombras (shadow-sm/shadow-lg) ficam invisíveis em fundo escuro se
+       continuarem pretas — troca-se por um brilho claro subtil. */
+    --tw-shadow-color: rgb(255 255 255 / 8%);
+  }
 }
 
 @theme inline {
