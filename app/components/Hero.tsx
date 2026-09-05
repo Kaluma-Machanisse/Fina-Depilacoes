@@ -35,7 +35,7 @@ export default function Hero() {
         </div>
 
         <div className="flex-1 flex items-center justify-center md:justify-end">
-          <span className="logo-hero w-full max-w-sm">
+          <span className="logo-hero logo-plate w-full max-w-sm">
             <Image
               src="/images/logo-fina-depilacoes.webp"
               alt="Fina Depilações"

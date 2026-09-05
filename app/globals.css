@@ -56,6 +56,27 @@
   --tw-shadow-color: rgb(255 255 255 / 8%);
 }
 
+/* Prancha clara atrás do logótipo — o ficheiro tem um brilho cinza-claro à
+   volta dos traços cozinhado na imagem (não é só fundo liso), por isso não
+   dá para o tornar transparente sem deixar um halo feio em fundo escuro.
+   Em vez disso, no modo escuro dá-se-lhe uma prancha clara própria — a
+   mesma ideia de "mudar o fundo consoante o tema", só que com uma cor em
+   vez de transparência. Em modo claro fica sem fundo, como sempre esteve. */
+.logo-plate {
+  border-radius: 0.75rem;
+  transition: background-color 0.2s ease, padding 0.2s ease;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-plate {
+    background: #fdf8f7;
+    padding: 0.4rem 0.75rem;
+  }
+}
+:root[data-theme="dark"] .logo-plate {
+  background: #fdf8f7;
+  padding: 0.4rem 0.75rem;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -21,13 +21,15 @@ export default function Footer() {
   return (
     <footer className="border-t border-primary-light bg-primary-light/20">
       <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
-        <Image
-          src="/images/logo-fina-depilacoes.webp"
-          alt="Fina Depilações"
-          width={900}
-          height={523}
-          className="h-11 w-auto"
-        />
+        <span className="logo-plate inline-flex items-center">
+          <Image
+            src="/images/logo-fina-depilacoes.webp"
+            alt="Fina Depilações"
+            width={900}
+            height={523}
+            className="h-11 w-auto"
+          />
+        </span>
 
         <ul className="flex gap-5">
           {redesSociais.map((rede) => {

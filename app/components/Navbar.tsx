@@ -116,7 +116,7 @@ export default function Navbar() {
           href="#"
           onClick={irParaTopo}
           aria-label="Fina Depilações — início"
-          className={`flex items-center shrink-0 ${focoAnel}`}
+          className={`logo-plate flex items-center shrink-0 ${focoAnel}`}
         >
           <Image
             src="/images/logo-fina-depilacoes.webp"
