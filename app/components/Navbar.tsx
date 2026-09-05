@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { gerarLinkWhatsApp } from "../lib/whatsapp";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#servicos", label: "Serviços" },
@@ -127,54 +128,58 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Navegação de desktop: links em ordem lógica, CTA sempre no fim. */}
-        <nav className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
+        <div className="flex items-center gap-4">
+          {/* Navegação de desktop: links em ordem lógica, CTA sempre no fim. */}
+          <nav className="hidden md:flex items-center gap-8">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                aria-current={activeHref === link.href ? "true" : undefined}
+                className={linkClasses(link.href)}
+              >
+                {link.label}
+              </a>
+            ))}
+            {/* O botão faz mesmo o que promete: abre o WhatsApp para marcar. */}
             <a
-              key={link.href}
-              href={link.href}
-              aria-current={activeHref === link.href ? "true" : undefined}
-              className={linkClasses(link.href)}
+              href={gerarLinkWhatsApp()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`bg-primary text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-wine transition-colors ${focoAnel}`}
             >
-              {link.label}
+              Marcar agora
             </a>
-          ))}
-          {/* O botão faz mesmo o que promete: abre o WhatsApp para marcar. */}
-          <a
-            href={gerarLinkWhatsApp()}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`bg-primary text-white rounded-lg px-4 py-2 text-sm font-medium hover:bg-wine transition-colors ${focoAnel}`}
-          >
-            Marcar agora
-          </a>
-        </nav>
+          </nav>
 
-        <button
-          ref={buttonRef}
-          type="button"
-          onClick={() => setOpen(!open)}
-          className={`md:hidden text-foreground ${focoAnel}`}
-          aria-label={open ? "Fechar menu" : "Abrir menu"}
-          aria-expanded={open}
-          aria-controls="menu-mobile"
-        >
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden="true"
+          <ThemeToggle />
+
+          <button
+            ref={buttonRef}
+            type="button"
+            onClick={() => setOpen(!open)}
+            className={`md:hidden text-foreground ${focoAnel}`}
+            aria-label={open ? "Fechar menu" : "Abrir menu"}
+            aria-expanded={open}
+            aria-controls="menu-mobile"
           >
-            {open ? (
-              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
-            ) : (
-              <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
-            )}
-          </svg>
-        </button>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+            >
+              {open ? (
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              ) : (
+                <path d="M4 7h16M4 12h16M4 17h16" strokeLinecap="round" />
+              )}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Navegação de telemóvel: mesma ordem, CTA em destaque no fim. */}
